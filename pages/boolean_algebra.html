@@ -5,15 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../styles/number_systems_style.css">
+
+    <link rel="stylesheet" href="../styles/boolean_algebra_style.css">
+    <script src="../scripts/boolean_algebra_handler.js"></script>
+
     <title>Boolean Algebra - Web Logica</title>
 </head>
 <body>
 
-<center>
-    <section id="formula"></section>
-    <section id="schema"></section>
-</center>
+
+<input type="checkbox" id="blur-toggle" onchange="toggleBlur()">
+<label for="blur-toggle">Blur таблиць</label>
+
+<div id="truth_tables"></div>
+    
 
 </body>
 </html>
