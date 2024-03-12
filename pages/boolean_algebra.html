@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../styles/boolean_algebra_style.css">
+    <script src="../scripts/boolean_algebra_handler.js"></script>
+
+    <title>Boolean Algebra - Web Logica</title>
+</head>
+<body>
+
+<center><h2>Таблиці істинності елементів булевої алгебри</h2></center>
+
+<input type="checkbox" id="blur-toggle" onchange="toggleBlur()">
+<label for="blur-toggle">Blur таблиць</label>
+
+<input type="checkbox" id="input-toggle" onchange="toggleInput()">
+<label for="input-toggle">Режим вводу</label>
+
+<div id="truth-tables"></div>
+
+<hr>
+
+<center><h2>Кастомні таблиці істинності</h2></center>
+
+<div>
+    <h3>Як користуватись кастомними таблицями істинності?</h3>
+    <h4>Формули</h4>
+    <p>Коли обираєш тип функції (and, or, ...) то потім в тебе відкривається одна або два текстового поля, де ти можеш ввести певну "формулу". Ось декілька паттернів:</p>
+    <li><span class="faq-example-cell">A</span> - аргумент, представлений в таблиці</li>
+    <li><span class="faq-example-cell">1</span> - булеве значення (можуть бути тільки 0, 1)</li>
+    <li><span class="faq-example-cell">[0]</span> - порядковий номер (індекс) функції в таблиці <u>починаючи з першої функції</u></li>
+</div><br>
+
+<button id="newtable-button" onclick="createNewCustomTruthTable()">Створити таблицю</button>
+
+<div id="custom-truth-tables"></div>
+
+
+<br><br><br><hr><br>
+<center><footer><i id="footer-text">© 2019-2024, Біцай Кирило. Усі права захищені.</i></footer></center>
+
+</body>
+</html>
+

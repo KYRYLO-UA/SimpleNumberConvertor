@@ -1,0 +1,210 @@
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     -webkit-user-select: none;
+     -khtml-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     -o-user-select: none;
+     user-select: none;
+}
+
+table {
+     border-collapse: collapse;
+     width: auto;
+     margin-bottom: 20px;
+}
+
+table, th, td {
+     border: 1px solid black;
+}
+
+th, td, tr {
+     /* padding: 10px; */
+     text-align: center;
+     transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+th {
+     background-color: #ececec;
+}
+
+section.truth_table {
+     display: inline-block;
+     width: 300px;
+}
+
+section > span.table_title {
+     font-weight: bold;
+}
+
+section > span.table_descr {
+     font-style: italic;
+     color: #6a6a6a;
+     font-size: small;
+     margin-left: 5px;
+}
+
+
+
+
+#input-toggle {
+     display: none;
+}
+
+#blur-toggle {
+     display: none;
+}
+
+label[for="blur-toggle"], label[for="input-toggle"], button#newtable-button {
+     font-size: medium;
+     border: none;
+     outline: none;
+     position: fixed;
+     right: 20px;
+     background: rgba(255, 255, 255, 0.5); 
+     z-index: 9998;
+     backdrop-filter: blur(5px);
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 8px; 
+     padding: 10px;
+     padding-left: 15px;
+     padding-right: 15px;
+     transition: right .3s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+label[for="blur-toggle"]:hover, label[for="input-toggle"]:hover, button#newtable-button:hover {
+     right: 35px;
+     background-color: #f2f2f2;
+}
+
+button#newtable-button {
+     bottom: 20px;
+}
+
+label[for="blur-toggle"] {
+     bottom: 120px;
+}
+
+label[for="input-toggle"] {
+     bottom: 70px;
+}
+
+
+/* th {
+     padding-top: 7px;
+     padding-bottom: 7px;
+} */
+
+td > input, select {
+     width: 60px;
+     height: 25px;
+     text-align: center;
+     cursor:default;
+}
+
+td > input:focus-visible, td > input:focus, td > input, select:focus-visible, select:focus, select, 
+th.custom-truth-table-cell-header > button, 
+th.custom-truth-table-cell-header > button:focus-visible, 
+th.custom-truth-table-cell-header > button:focus {
+     outline: none;
+     border: none;
+     border-radius: 0;
+     background: none;
+}
+
+
+div.custom-truth-table > section {
+     margin-bottom: 10px;
+}
+
+button.custom-truth-table-manage-button {
+     outline: none;
+     border: none;
+     padding: 7px 15px 5px 15px;
+     margin-left: 5px;
+     font-weight:bold;
+     border-radius: 10px;
+     transition: padding .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button.custom-truth-table-manage-button:hover {
+     padding-left: 25px;
+     padding-right: 25px;
+}
+
+button.delete {
+     background-color: rgb(255, 171, 171);
+}
+
+span.custom-truth-table-title {
+     padding: 7px 15px 5px 15px;
+     border-radius: 10px;
+     transition: background-color 1.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+span.custom-truth-table-title:hover {
+     background-color: #f2f2f2;
+}
+
+select {
+     background: none;
+}
+
+
+/* delete */
+
+th.custom-truth-table-cell-header > span.custom-truth-table-cell-header-title {
+     padding: 0 8px 0 8px;
+     height: 100%;
+}
+
+th.custom-truth-table-cell-header > button {
+     height: 100%;
+     font-weight: bolder;
+     padding: 0 5px 0 5px;
+}
+
+
+input.formula-input, input.formula-input:focus, input.formula-input:focus-visible {
+     outline: none;
+}
+
+input.formula-input {
+     width: 20px;
+     text-align: center;
+     border-radius: 0;
+     border-width: 0px;
+     /* padding: 1px 0 0 0; */
+     height: 20px;
+     width: 20px;
+     background-color: #ececec;
+     border-width: 0 0 2px 0;
+     transition: background-color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input.first {
+     margin: 4px 0 4px 5px;
+}
+
+input.second {
+     margin: 4px 5px 4px 0;
+}
+
+input.formula-input:hover {
+     background-color: rgb(255,255,255);
+}
+
+p {
+     margin: 0;
+     width: 40%;
+}
+h5 {
+     margin: 0;
+}
+
+.faq-example-cell {
+     /* height: 30px;
+     width: 30px; */
+     padding: 0 8px 0 8px;
+     background-color: #ececec;
+} 
