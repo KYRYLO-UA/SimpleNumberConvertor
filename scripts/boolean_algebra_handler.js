@@ -77,7 +77,17 @@ const actions = [
      ["nor", [true, true]],
      ["xor", [true, true]],
      ["xnor", [true, true]],
-     ["joke", [true, false]]
+     ["joke", [true, false]],
+     ["----------", [false, false]],
+     ["–", [false, true]],
+     ["⋀", [true, true]],
+     ["⋁", [true, true]],
+     ["→", [true, true]],
+     ["~", [true, true]],
+     ["↑", [true, true]],
+     ["↓", [true, true]],
+     ["⊕", [true, true]],
+     
 ]
 
 var leftMouseButtonDown = false
@@ -235,7 +245,7 @@ function createNewCustomTruthTable() {
                });
 
                Object.values(CUSTOM_TRUTH_TABLES[uniqueTableId].FUNCS).forEach(func => {
-                    table += `<td><input readonly class="table_input" type="number" value="${func[i]}" min=0 max=1 data-truevalue="${func[i]}"></td>`;
+                    table += `<td><input class="table_input" type="number" value="${func[i]}" min=0 max=1 data-iscustom=true data-truevalue="${func[i]}"></td>`;
                });
 
                table += "</tr>";
@@ -287,9 +297,10 @@ function setupColorHighlighting(forceChange) {
 }
 
 function applyInputMode(inputEnabled) {
+     // let isfrom = document.getElementById("truth-tables")
      const cells = document.querySelectorAll('.table_input');
      cells.forEach(cell => {
-          cell.readOnly = !inputEnabled
+          if (cell.dataset.iscustom) { cell.readOnly = false } else { cell.readOnly = !inputEnabled }
      });
      setupColorHighlighting(inputEnabled)
 }
